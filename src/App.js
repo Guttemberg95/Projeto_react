@@ -13,6 +13,9 @@ import React from "react";
 import './css/cadastro.css';
 import './css/estiloFaq.css';
 import './css/home.css';
+import ListarPlaylists from './componentes/ListarPlaylists';
+import DetalhesPlaylist from './componentes/DetalhesPlaylist'
+import playlists from './DadosPlaylist';
 
 import {
   BrowserRouter as Router,
@@ -26,8 +29,14 @@ function App() {
   return (
     <Router>
       <div>
-        <Header/>
+        <Header />
         <Switch>
+          <Route path="/Playlists" >
+            <ListarPlaylists />
+          </Route>
+          <Route path="/Playlists/:id" >
+            <DetalhesPlaylist />
+          </Route>
           <Route path="/Cadastro">
             <Cadastro />
           </Route>
@@ -38,7 +47,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );
