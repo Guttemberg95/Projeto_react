@@ -4,7 +4,7 @@ import playlists from "./DadosPlaylist";
 function DetalhesPlaylist () {
     const { id } = useParams();
 
-    const playlist = playlists.find( (p) => playlists.id == id)
+    const playlist = playlists.find( (p) => p.id == id)
     const musicas = playlist.musicas.map ((m) => {
         return (
             <li>
