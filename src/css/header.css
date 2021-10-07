@@ -1,0 +1,15 @@
+.jumbotron {
+    text-align: center;
+    background-color: #000000;
+    margin: 0px;
+    border-radius: inherit;
+}
+
+.jumbotron a {
+    color: rgb(255, 255, 255);
+}
+
+.header {
+    background-color: #1d75de;
+    padding-bottom: 10px;
+}

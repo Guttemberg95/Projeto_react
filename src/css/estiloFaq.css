@@ -1,0 +1,181 @@
+.jumbotron {
+    text-align: center;
+    background-color: #000000;
+    margin: 0px;
+    border-radius: inherit;
+}
+
+.jumbotron a {
+   color: rgb(255, 255, 255);
+}
+
+.header {
+    background-color: #14213d;
+}
+
+.texto {
+    color: #e5e5e5;
+    margin-left: 80px;
+}
+
+.btn {
+    background-color: #000000;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+    margin-left: 80px;
+}
+
+.Input-buscar {
+    border: 0px;
+    border-radius: 10px;
+    width: 50%;
+    box-sizing: border-box;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 12%;
+    border-radius: 4px;
+    padding: 14px;
+    background-color: var(--background-base,#ffffff);
+    margin-bottom: 20px;
+}
+
+#barra-pesquisar h1 {
+    color: #ffffff;
+    padding: 80px 0 40px;
+    text-align: center;
+    font-size: 64px;
+    box-sizing: border-box;
+    font-weight: 700;
+    text-align: center;
+    padding: 80px 0 40px;
+    font-size: 64px;
+    
+}
+
+.input-container {
+    margin-left: 20%;
+}
+
+.table{
+    margin-left: 10%;
+    margin-right: 70px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: 78%;
+
+
+}
+
+.table tr{
+   color: #d9d9d9;
+   margin-left: 60px;
+    margin-right: 70px;
+  
+}
+.table  td{
+    border: 0px; 
+   
+   
+    margin-top: 70px;
+   
+  border:none !important;
+ 
+  
+}
+
+table td{
+    border:none !important;
+  }
+
+.table a {
+ border: 0px; 
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+}
+
+
+.lista-categorias li  {
+  
+    font-weight: 700;
+    list-style-type: none;
+}
+.lista-categorias a {
+    color: #169b45;
+    text-decoration: none;
+}
+
+.titulo-categorias {
+    color:rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+#Background {
+    padding-bottom: 15px;
+    width: 100%;
+    background: url(https://support.scdn.co/web/_next/static/assets/36e5b3b/search-mobile.webp) no-repeat #1c2963;
+    background-image: url(https://support.scdn.co/web/_next/static/assets/36e5b3b/search-desktop.webp);
+      
+}
+
+.categorias-section-container li {
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.categorias-section-container li a:hover {
+ color: #1c2963;
+}
+
+.categorias-section-container  {
+    margin-left: 10%;
+    margin-right: 10%;
+    
+   }
+
+.categorias-section {
+    padding: 40px 0 50px;
+ 
+    background-color: #eee;
+}
+.comunidade-section {
+    padding: 80px 16px;
+    text-align: center;
+}
+.comunidade-section h1 {
+    font-size: 48px;
+    padding-bottom: 20px;
+    font-weight: 900;  
+}
+
+.container-comunidade p {
+    max-width: 500px;
+    margin: 0 auto 16px;
+    font-size: 18px;
+    font-weight: 400;
+    
+}
+.btn {
+    background-color: #21e065;
+    border-radius: 500px;
+    width: 200px;
+    padding: 14px 2px;
+    text-align: center;
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+.container-comunidade a {
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+ 
+  
+}
+
+
+

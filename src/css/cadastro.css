@@ -1,0 +1,95 @@
+.jumbotron {
+    text-align: center;
+    background-color: #000000;
+    margin: 0px;
+    border-radius: inherit;
+}
+
+.jumbotron a {
+    color: rgb(255, 255, 255);
+}
+
+.header {
+    background-color: #1d75de;
+    padding-bottom: 10px;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;  
+    height: 110px;
+      
+}
+
+h2 {    
+    text-align: center;
+    font-size: 35px;
+    white-space: pre;
+}
+
+.btn-facebook {     
+    background: #1528d1;
+    color:white;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+main {    
+    width: 940px;    
+}
+
+form {
+    text-align: center;    
+    margin-top: 40px 0;
+}
+
+form label, form p {    
+    margin: 40px 0;
+}
+
+.input-padrao {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    width: 25%;
+}
+
+.checkbox {    
+    text-align: center;
+    display: block;
+    margin: 30px 10px;
+}
+
+.btn-inscrever {
+    background: #1ed760;
+    color:black;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.politica, .termos,.login {
+    color: #1ed760;    
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 15px;
+}
