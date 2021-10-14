@@ -9,7 +9,7 @@ function ListarPlaylists() {
         return (
             <div className="card" style={{ width: '300px', height: '300px'}}>
             <Link to={`/Playlists/${p.id} `}>   
-                <img src={p.capa} className="card-img-top" style={{ width: '250px', height: '250px'}} />
+                <img src={p.capa} className="card-img-top" style={{ width: '250px', height: '250px',borderRadius:'350px', boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
                 <div className="card-body">
                     <h5 className="card-title">{p.nome}</h5>
                 </div>

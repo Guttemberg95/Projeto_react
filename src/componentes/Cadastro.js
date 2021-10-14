@@ -3,19 +3,19 @@ import usuario from "./Usuario";
 
 function Cadastro() {
     const [email, setEmail] = useState('');
-    const [error, setError] = useState('{}');
+    const [error, setError] = useState({email: ''});
     const [confirmacaoEmail, setConfirmacaoEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [user, setUser] = useState('');
     const [data, setData] = useState('');
     const [sexo, setSexo] = useState('Masculino');
-    let validaEmail;
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        if (email != confirmacaoEmail) {
-            validaEmail = "Os endereços de email informado não conferem!"
+        if (email !== confirmacaoEmail) {
+            setError ( { email: 'Os endereços de emails informados não conferem!' } )
+            return;
         }
 
         usuario.push({
@@ -28,10 +28,25 @@ function Cadastro() {
         });
 
         console.log(usuario);
-        console.log(validaEmail);
+        limpar();
+    }
+
+    function limpar() {
+        setEmail('');
+        setConfirmacaoEmail('');
+        setSenha('');
+        setUser('');
+        setData('');
+        setSexo('Masculino');
+        setError({email: ''});
     }
 
     return (
+        <>
+            {error.email && (<div className='alert alert-danger' role="alert">
+                {error.email}
+            </div>)}
+
         <div>
             <img src="./img/Spotify-Black-Logo.wine.svg" alt="" className="logo" />
 
@@ -65,13 +80,13 @@ function Cadastro() {
                     <p>Qual é o seu gênero?</p>                    
 
                     <label for="radio-masculino"><input type="radio" name="sexo" value="Masculino"
-                        id="radio-masculino" checked={sexo == 'Masculino'} onClick={(e) => setSexo('Masculino')} />Masculino</label>
+                        id="radio-masculino" checked={sexo === 'Masculino'} onClick={(e) => setSexo('Masculino')} />Masculino</label>
 
                     <label for="radio-feminino"><input type="radio" name="sexo" value="Feminino"
-                        id="radio-feminino" checked={sexo == 'Feminino'} onClick={(e) => setSexo('Feminino')} />Feminino</label>
+                        id="radio-feminino" checked={sexo === 'Feminino'} onClick={(e) => setSexo('Feminino')} />Feminino</label>
 
                     <label for="radio-nao-binario"><input type="radio" name="sexo" value="Nao binario"
-                        id="radio-nao-binario" checked={sexo == 'Nao binario'} onClick={(e) => setSexo('Nao binario')} />Não binário</label>
+                        id="radio-nao-binario" checked={sexo === 'Nao binario'} onClick={(e) => setSexo('Nao binario')} />Não binário</label>
 
                 </div>
 
@@ -95,6 +110,7 @@ function Cadastro() {
                 href="https://accounts.spotify.com/pt-BR/login?continue=https:%2F%2Fwww.spotify.com%2Faccount%2Foverview%2F&_ga=2.267274440.790420978.1629205849-1991266309.1629205849"
                 className="login">Faça login.</a></h3>
         </div>
+        </>
     )
 };
 
