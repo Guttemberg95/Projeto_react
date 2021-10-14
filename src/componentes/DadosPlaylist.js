@@ -7,17 +7,17 @@ const playlists = [
             {
 
                 id: 1,
-                nome: 'nomemusica1',
-                cantor: 'cantorRock',
-                arquivo: '../musicas/Guitarra.mp3'
+                nome: 'Sweet Child O Mine',
+                cantor: 'Guns N Rose',
+                arquivo: '../musicas/Guns N Roses - Sweet Child O Mine.mp3'
             },
 
             {
 
                 id: 2,
-                nome: 'nomemusica2',
-                cantor: 'cantorRock2',              
-                arquivo: '../musicas/Guitarra2.mp3'
+                nome: 'Smells Like Teen Spirit',
+                cantor: 'Nirvana',              
+                arquivo: '../musicas/Nirvana - Smells Like Teen Spirit.mp3'
             },
 
 
@@ -46,10 +46,6 @@ const playlists = [
                 cantor: 'Camila Cabelo',
                 arquivo: '../musicas/Senorita Mp3 By Camila Cabello and Shawn Mendes.mp3'
             },
-
-
-
-
         ]
 
     },
@@ -61,22 +57,18 @@ const playlists = [
             {
 
                 id: 5,
-                nome: 'Love The Way You Lie Mp3 Song Download Ft Rihanna',
-                cantor: 'Eminem',
+                nome: 'Love The Way You Lie',
+                cantor: 'Eminem ft. Rihanna',
                 arquivo: '../musicas/Eminem - Love The Way You Lie Mp3 Song Download Ft Rihanna.mp3'
             },
 
             {
 
                 id: 6,
-                nome: 'Venom ',
+                nome: 'Venom',
                 cantor: 'Eminem',
                 arquivo: '../musicas/Venom Song - Eminem.mp3'
             },
-
-
-
-
         ]
 
     },
@@ -88,22 +80,18 @@ const playlists = [
             {
 
                 id: 7,
-                nome: 'nomemusica1',
-                cantor: 'cantorEletronica1',
-                arquivo: '..aaaa.mp3'
+                nome: 'Wake Me Up',
+                cantor: 'Avicii',
+                arquivo: '../musicas/Avicii - Wake Me Up (Official Video).mp3'
             },
 
             {
 
                 id: 8,
-                nome: 'nomemusica2',
-                cantor: 'cantorEletronica2',
-                arquivo: 'bbbb.mp3'
+                nome: 'Faded',
+                cantor: 'Alan Walker',
+                arquivo: '../musicas/Alan Walker - Faded.mp3'
             },
-
-
-
-
         ]
 
     }

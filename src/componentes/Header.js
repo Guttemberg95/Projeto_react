@@ -4,7 +4,7 @@ function Header() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-                <h1 style={{ color: '#e5e5e5' }}>
+                <h1 style={{ color: '#e5e5e5'}}>
                     Spotify
                 </h1>
                 <div className="container-fluid">

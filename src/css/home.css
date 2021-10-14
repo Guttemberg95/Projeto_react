@@ -9,12 +9,13 @@
     color: rgb(255, 255, 255);
 }
 
-.header {
+.header_home {
     background-color: #1d75de;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
 }
 
 .texto {
+    font-family: Helvetica, Arial, sans-serif;
     color: #e5e5e5;
     margin-left: 80px;
 }
@@ -30,7 +31,7 @@
     margin-top: 25px;
 }
 
-.btn-inscrever {
+.btn-inscrever-home {
     background: #1ed760;
     color:black;
     padding: 20px 50px;
@@ -43,11 +44,11 @@
 }
 
 .card {
-    height: 25rem;;
+    height: 30rem;;
 }
 
 .card-body {
-    height: 25rem;
+    height: 30rem;
 }
 
 footer {

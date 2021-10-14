@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './componentes/Home.js';
 import './componentes/Cadastro.js';
 import './componentes/Faq.js';
@@ -46,8 +47,8 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Footer />
       </div>
+      <Footer />
     </Router>
   );
 }

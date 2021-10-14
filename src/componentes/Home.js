@@ -1,19 +1,21 @@
 import {Link} from "react-router-dom";
 import img1 from '../img/02120615534339.jpg';
 import img2 from '../img/Qual-é-o-melhor-streaming-para-ouvir-música_.jpg';
+import img3 from '../img/guitarra.jpg';
 
 function Home() {
     return (
     <div>
-    <div className="header">
+    <div className="header_home">
 
-        <h2 className="texto" style={{paddingTop: '10px'}}>
+        <h1 className="texto" style={{paddingTop: '50px'}}>
             Aproveite 1 mês grátis de Premium
-        </h2>
+        </h1>
 
         <h4 className="texto" style={{paddingTop: '10px'}}>
             Depois, pague somente R$ 19,90/mês. Cancele quando quiser.
         </h4>
+
         <Link to="/Cadastro" className="nav-link">
             <button type="button" className="btn btn-dark" style={{marginLeft: '60px'}}>
                 Começar
@@ -34,13 +36,18 @@ function Home() {
                 aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
         <div className="carousel-inner">
             <div className="carousel-item active">
-                <img src={img1} className="d-block w-100" alt="img1" height="400px" width="100%"/>
+                <img src={img3} className="d-block w-100" alt="img1" height="400px" width="100%"/>
             </div>
             <div className="carousel-item">
                 <img src={img2} className="d-block w-100" alt="img2" height="400px" width="100%"/>
+            </div>
+            <div className="carousel-item">
+                <img src={img1} className="d-block w-100" alt="img3" height="400px" width="100%"/>
             </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -55,7 +62,7 @@ function Home() {
         </button>
     </div>
 
-    <div>
+    <div className='container'>
         <h2 style={{textAlign: 'center'}}>
             Escolha seu plano
         </h2>
@@ -78,7 +85,7 @@ function Home() {
                         </div>
 
                         <Link to="/Cadastro" className="nav-link">
-                            <button type="button" className="btn-inscrever">
+                            <button type="button" className="btn-inscrever-home">
                                 Começar
                             </button>
                         </Link>
@@ -104,7 +111,7 @@ function Home() {
                                 Faça um plano pré-pago ou uma assinatura </p>
                         </div>
                         <Link to="/Cadastro" className="nav-link">
-                            <button type="button" className="btn-inscrever">
+                            <button type="button" className="btn-inscrever-home">
                                 Começar
                             </button>
                         </Link>
@@ -134,7 +141,7 @@ function Home() {
                         </div>
 
                         <Link to="/Cadastro" className="nav-link">
-                            <button type="button" className="btn-inscrever">
+                            <button type="button" className="btn-inscrever-home">
                                 Começar
                             </button>
                         </Link>

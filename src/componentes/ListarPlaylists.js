@@ -7,18 +7,23 @@ function ListarPlaylists() {
 
     const RetornaLista = playlists.map((p) => {
         return (
-            
-                <h1><Link to={`/Playlists/${p.id} `}> <img src={p.capa} width="20%" height="30%"/></Link></h1>
+            <div className="card" style={{ width: '300px', height: '300px'}}>
+            <Link to={`/Playlists/${p.id} `}>   
+                <img src={p.capa} className="card-img-top" style={{ width: '250px', height: '250px'}} />
+                <div className="card-body">
+                    <h5 className="card-title">{p.nome}</h5>
+                </div>
+                
+            </Link>
+            </div>
         )
     })
+
     return (
-        <div className="">
+        <div className="card-group">
             {RetornaLista}
-        </div>);
-
-
-
-
+        </div>
+    )
 }
 
 export default ListarPlaylists;

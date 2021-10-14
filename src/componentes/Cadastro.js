@@ -3,17 +3,24 @@ import usuario from "./Usuario";
 
 function Cadastro() {
     const [email, setEmail] = useState('');
+    const [error, setError] = useState('{}');
+    const [confirmacaoEmail, setConfirmacaoEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [user, setUser] = useState('');
     const [data, setData] = useState('');
-    const [sexo, setSexo] = useState('');
+    const [sexo, setSexo] = useState('Masculino');
+    let validaEmail;
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        //pegar dados do formulário e salvar em um mock
+        if (email != confirmacaoEmail) {
+            validaEmail = "Os endereços de email informado não conferem!"
+        }
+
         usuario.push({
             email: email,
+            confirmacaoEmail: confirmacaoEmail,
             senha: senha,
             apelido: user,
             nascimento: data,
@@ -21,8 +28,8 @@ function Cadastro() {
         });
 
         console.log(usuario);
+        console.log(validaEmail);
     }
-
 
     return (
         <div>
@@ -30,7 +37,7 @@ function Cadastro() {
 
             <h2>Inscreva-se grátis e comece a <br />curtir.</h2>
 
-            <form onSubmit={(e) => handleSubmit(e)}>
+            <form onSubmit={ (e) => handleSubmit(e)}>
                 <div>
                     <a href="https://www.facebook.com/" className="btn-facebook">Inscrever-se com o Facebook</a>
 
@@ -40,19 +47,22 @@ function Cadastro() {
                 </div>
 
                 <label for="email">Qual é o seu e-mail?</label>
-                <input type="email" id="email" className="input-padrao" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="email" id="email" className="input-padrao" required value={email} onChange={(e) => setEmail(e.target.value)} />
+
+                <label for="email">Confirme seu email</label>
+                <input type="email" id="emailConfirmacao" className="input-padrao" required value={confirmacaoEmail} onChange={(e) => setConfirmacaoEmail(e.target.value)} />
 
                 <label for="senha">Crie uma senha</label>
-                <input type="password" id="nome" className="input-padrao" value={senha} onChange={(e) => setSenha(e.target.value)} />
-
+                <input type="password" id="senha" className="input-padrao" required value={senha} onChange={(e) => setSenha(e.target.value)} />
+                
                 <label for="nome">Como devemos chamar você?</label>
-                <input type="text" id="senha" className="input-padrao" value={user} onChange={(e) => setUser(e.target.value)} />
+                <input type="text" id="nome" className="input-padrao" required value={user} onChange={(e) => setUser(e.target.value)} />
 
                 <label for="nascimento">Qual sua data de nascimento?</label>
-                <input type="date" id="nascimento" className="input-padrao" value={data} onChange={(e) => setData(e.target.value)} />
+                <input type="date" id="nascimento" className="input-padrao" required value={data} onChange={(e) => setData(e.target.value)} />
 
                 <div>
-                    <p>Qual é o seu gênero?</p>
+                    <p>Qual é o seu gênero?</p>                    
 
                     <label for="radio-masculino"><input type="radio" name="sexo" value="Masculino"
                         id="radio-masculino" checked={sexo == 'Masculino'} onClick={(e) => setSexo('Masculino')} />Masculino</label>
@@ -69,7 +79,7 @@ function Cadastro() {
                 <label className="checkbox"><input type="checkbox" />Compartilhar meus dados cadastrais com os provedores<br /> de
                     conteúdo
                     do Spotify para fins de marketing.</label>
-                <label className="checkbox"><input type="checkbox" />Eu concordo com os <a
+                <label className="checkbox"><input type="checkbox" required/>Eu concordo com os <a
                     href="https://www.spotify.com/br/legal/end-user-agreement/" className="termos">Termos e Condições de Uso do
                     Spotify.</a></label>
 
