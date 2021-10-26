@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './img/spotify-logotipo.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -20,8 +20,7 @@ import DetalhesPlaylist from './componentes/DetalhesPlaylist'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 

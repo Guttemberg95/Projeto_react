@@ -1,9 +1,15 @@
-import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import playlists from './DadosPlaylist';
-
+//import playlists from './DadosPlaylist';
+import axios from 'axios';
+import { useState, useEffect } from "react";
 
 function ListarPlaylists() {
+    const [playlists, setPlaylists] = useState([]);
+
+    useEffect( () => {
+        axios.get('http://localhost:3001/playlists')
+        .then ( (RetornaLista) => setPlaylists(RetornaLista.data) )
+    }, [])
 
     const RetornaLista = playlists.map((p) => {
         return (
@@ -13,7 +19,6 @@ function ListarPlaylists() {
                 <div className="card-body">
                     <h5 className="card-title">{p.nome}</h5>
                 </div>
-                
             </Link>
             </div>
         )

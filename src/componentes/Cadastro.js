@@ -20,7 +20,6 @@ function Cadastro() {
 
         usuario.push({
             email: email,
-            confirmacaoEmail: confirmacaoEmail,
             senha: senha,
             apelido: user,
             nascimento: data,
@@ -48,7 +47,7 @@ function Cadastro() {
             </div>)}
 
         <div>
-            <img src="./img/Spotify-Black-Logo.wine.svg" alt="" className="logo" />
+            <img src="../img/spotify-logotipo.png" alt="" className="logo" />
 
             <h2>Inscreva-se grátis e comece a <br />curtir.</h2>
 
@@ -61,7 +60,7 @@ function Cadastro() {
                     </p>
                 </div>
 
-                <label for="email">Qual é o seu e-mail?</label>
+                <label for="email">Digite seu email</label>
                 <input type="email" id="email" className="input-padrao" required value={email} onChange={(e) => setEmail(e.target.value)} />
 
                 <label for="email">Confirme seu email</label>
