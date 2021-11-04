@@ -1,19 +1,16 @@
-import logo from './img/spotify-logotipo.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './componentes/Home.js';
 import './componentes/Cadastro.js';
 import './componentes/Faq.js';
+import './componentes/Login.js';
 import Home from './componentes/Home';
 import Cadastro from './componentes/Cadastro';
 import Faq from './componentes/Faq';
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
 import React from "react";
-import './css/cadastro.css';
-import './css/estiloFaq.css';
-import './css/home.css';
 import ListarPlaylists from './componentes/ListarPlaylists';
 import DetalhesPlaylist from './componentes/DetalhesPlaylist'
 
@@ -22,6 +19,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Login from './componentes/Login.js';
 
 
 function App() {
@@ -41,6 +39,9 @@ function App() {
           </Route>
           <Route path="/Faq">
             <Faq />
+          </Route>
+          <Route path="/Login">
+            <Login />
           </Route>
           <Route path="/">
             <Home />

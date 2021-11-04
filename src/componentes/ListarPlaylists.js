@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-//import playlists from './DadosPlaylist';
 import axios from 'axios';
 import { useState, useEffect } from "react";
+import '../css/listarplay.css';
 
 function ListarPlaylists() {
     const [playlists, setPlaylists] = useState([]);
@@ -13,9 +13,9 @@ function ListarPlaylists() {
 
     const RetornaLista = playlists.map((p) => {
         return (
-            <div className="card" style={{ width: '300px', height: '300px'}}>
+            <div className="card">
             <Link to={`/Playlists/${p.id} `}>   
-                <img src={p.capa} className="card-img-top" style={{ width: '250px', height: '250px',borderRadius:'350px', boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                <img src={p.capa} className="card-img-top"/>
                 <div className="card-body">
                     <h5 className="card-title">{p.nome}</h5>
                 </div>

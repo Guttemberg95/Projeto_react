@@ -1,0 +1,53 @@
+main {    
+    width: 940px;    
+}
+
+.cad {
+    text-align: center;    
+    margin-top: 20px 0;
+}
+
+.label {    
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.input-padrao {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 25%;
+}
+
+.btn-inscrever {
+    background: #1ed760;
+    color:black;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn-inscrever:hover {
+    opacity: 0.6;
+}
+
+.lostsenha {
+    color: darkgray;
+    font-size: 12px;
+    padding-top: 3px;
+    margin-right: 235px;
+}
+
+.lostsenha:hover {
+    color: #15883e;
+}

@@ -8,6 +8,8 @@ function Header() {
             <ul> 
                 <img src={spot_branco} width="40" height="auto" style={{paddingBottom:"17px"}}/>
                 <h1 className='title'>Spotify</h1>
+                <li><Link to="/Login">Login</Link></li> 
+                <li><p>|</p></li>
                 <li><Link to="/Faq">FAQ</Link></li>  
                 <li><Link to="/Playlists">Playlists</Link></li>  
                 <li><Link to="/Cadastro">Cadastro</Link></li>      

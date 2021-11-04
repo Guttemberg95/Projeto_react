@@ -4,7 +4,6 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: black;
-    height: 60px;
   }
   
   li {
@@ -22,6 +21,12 @@ ul {
   
   li a:hover {
     color: #1ed760;
+  }
+
+  li p {
+    font-size: 20px;
+    margin-top: 9px;
+    color: white;
   }
 
   .title {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import usuario from "./Usuario";
+import '../css/cadastro.css';
 
 function Cadastro() {
     const [email, setEmail] = useState('');
