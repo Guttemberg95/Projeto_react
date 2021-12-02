@@ -31,7 +31,7 @@ function Editar() {
 
             let dados = { email, senha, user, data, sexo }
 
-            axios.put(`http://localhost:3001/usuarios?id=${usuario}`, dados)
+            axios.put(`http://localhost:3001/usuarios?id=${usuario.id}`, dados)
                 .then(res => console.log(res.data))
     
     }
@@ -41,8 +41,6 @@ return (
 
         <div>
             <img src="../img/spotify-logotipo.png" alt="" className="logo" />
-
-            <h2>Inscreva-se grátis e comece a <br />curtir.</h2>
 
             <form onSubmit={(e) => handleSubmit(e)}>
 
@@ -72,7 +70,7 @@ return (
 
                 </div>
 
-                <input type="submit" value="Inscrever-se" className="btn-inscrever" />
+                <input type="submit" value="Editar" className="btn-inscrever" />
             </form>
         </div>
     </>

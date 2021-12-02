@@ -38,7 +38,7 @@ function App() {
             <ListarPlaylists />
           </Route>
           <Route path="/Editar">
-            <Cadastro />
+            <Editar />
           </Route>
           <Route path="/Cadastro">
             <Cadastro />

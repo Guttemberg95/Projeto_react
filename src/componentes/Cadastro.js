@@ -15,7 +15,7 @@ function Cadastro() {
     async function handleSubmit(e) {
         e.preventDefault();
 
-        if (email !== confirmacaoEmail && email.length > 0) {
+        if (email !== confirmacaoEmail) {
             
             let dados = { email, senha, user, data, sexo}
             
