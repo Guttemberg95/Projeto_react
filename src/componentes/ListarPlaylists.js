@@ -7,17 +7,29 @@ function ListarPlaylists() {
     const [playlists, setPlaylists] = useState([]);
 
     useEffect( () => {
-        axios.get('http://localhost:3001/playlists')
-        .then ( (RetornaLista) => setPlaylists(RetornaLista.data) )
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+        if (usuario !== null) {
+
+            axios.get(`http://localhost:3001/usuarios?email=${usuario.email}`)
+                .then((res) => setPlaylists(res.data[0].playlists))
+
+        } else {
+
+            axios.get('http://localhost:3001/playlists')
+                .then ( (res) => setPlaylists(res.data) )
+
+        }
+
     }, [])
+
 
     const RetornaLista = playlists.map((p) => {
         return (
-            <div className="card">
+            <div className="card-playlist">
             <Link to={`/Playlists/${p.id} `}>   
                 <img src={p.capa} className="card-img-top"/>
                 <div className="card-body">
-                    <h5 className="card-title">{p.nome}</h5>
+                    <h5 className="card-title-playlist">{p.nome}</h5>
                 </div>
             </Link>
             </div>

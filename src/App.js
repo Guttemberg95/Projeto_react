@@ -10,9 +10,11 @@ import Cadastro from './componentes/Cadastro';
 import Faq from './componentes/Faq';
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
-import React from "react";
+import Editar from './componentes/Editar';
 import ListarPlaylists from './componentes/ListarPlaylists';
-import DetalhesPlaylist from './componentes/DetalhesPlaylist'
+import DetalhesPlaylist from './componentes/DetalhesPlaylist';
+import React from "react";
+
 
 import {
   BrowserRouter as Router,
@@ -20,19 +22,23 @@ import {
   Route
 } from "react-router-dom";
 import Login from './componentes/Login.js';
+import usuario from './componentes/Usuario';
 
 
 function App() {
   return (
     <Router>
       <div>
-        <Header />
+        <Header/>
         <Switch>
           <Route path="/Playlists/:id" >
             <DetalhesPlaylist />
           </Route>
           <Route path="/Playlists" >
             <ListarPlaylists />
+          </Route>
+          <Route path="/Editar">
+            <Cadastro />
           </Route>
           <Route path="/Cadastro">
             <Cadastro />

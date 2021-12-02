@@ -1,14 +1,17 @@
-.card {
+.card-playlist {
+    padding-top: 10px;
+    padding-left: 10px;
     width: 300px;
     height: 300px;
 }
 
-.card-title {
+.card-title-playlist {
     padding-right: 90px;
     color: black;
+    text-align: center;
 }
 
-.card-title:hover {
+.card-title-playlist:hover {
     color: #15883e;
 }
 

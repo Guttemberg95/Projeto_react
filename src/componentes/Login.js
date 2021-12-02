@@ -7,6 +7,7 @@ function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [error, setError] = useState({ dadosInvalidos: '' });
+    
     const history = useHistory();
 
     function handleSubmit(e) {
@@ -14,15 +15,21 @@ function Login() {
 
         axios.get(`http://localhost:3001/usuarios?email=${email}`)
             .then((res) => {
-                const usuario = res.data[0];
+                if (res.data[0] != undefined) {
+                    const usuario = res.data[0];
 
-                if (usuario.senha !== senha) {
-                    setError({ dadosInvalidos: 'Dados Inválidos' });
-                    return
+                    if (usuario.senha !== senha) {
+                        setError({ dadosInvalidos: 'Dados Inválidos' });
+                        return
+                    }
+
+                    localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+
+                    ///Implementação incompleta
+                    //props.setLogin(true)
+
+                    history.push('/')
                 }
-
-                localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-                history.push('/')
             })
     }
 

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import img1 from '../img/02120615534339.jpg';
 import img2 from '../img/Qual-é-o-melhor-streaming-para-ouvir-música_.jpg';
 import img3 from '../img/guitarra.jpg';
+import '../css/home.css';
 
 function Home() {
     return (

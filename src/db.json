@@ -83,7 +83,31 @@
             "id": 1,
             "email": "guttemberg@teste.com",
             "senha": "123456",
-            "Nome": "Guttemberg"
+            "user": "Guttemberg",
+            "data": "28/05/1995",
+            "sexo": "Masculino",
+            "playlists": [
+                {
+                    "id": 1,
+                    "nome": "Rock",
+                    "capa": "../imgplaylists/Rock.jpg",
+                    "musicas": [
+                        {
+                            "id": 1,
+                            "nome": "Sweet Child O Mine",
+                            "cantor": "Guns N Rose",
+                            "arquivo": "../musicas/Guns N Roses - Sweet Child O Mine.mp3"
+                        },
+                        {
+                            "id": 2,
+                            "nome": "Smells Like Teen Spirit",
+                            "cantor": "Nirvana",
+                            "arquivo": "../musicas/Nirvana - Smells Like Teen Spirit.mp3"
+                        }
+                    ]
+                }
+            ]
+
         }
     ]
 }

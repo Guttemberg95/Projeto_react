@@ -1,6 +1,7 @@
 import { useState } from "react";
 import usuario from "./Usuario";
 import '../css/cadastro.css';
+import axios from "axios";
 
 function Cadastro() {
     const [email, setEmail] = useState('');
@@ -11,34 +12,24 @@ function Cadastro() {
     const [data, setData] = useState('');
     const [sexo, setSexo] = useState('Masculino');
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
-        if (email !== confirmacaoEmail) {
-            setError ( { email: 'Os endereços de emails informados não conferem!' } )
-            return;
+        if (email !== confirmacaoEmail && email.length > 0) {
+            
+            let dados = { email, senha, user, data, sexo}
+            
+            axios.post("http://localhost:3001/usuarios", dados)
+                .then(res => console.log(res.data))
+
+            setEmail('');
+            setConfirmacaoEmail('');
+            setSenha('');
+            setUser('');
+            setData('');
+            setSexo('Masculino');
+            setError({email: ''})
         }
-
-        usuario.push({
-            email: email,
-            senha: senha,
-            apelido: user,
-            nascimento: data,
-            sexo: sexo
-        });
-
-        console.log(usuario);
-        limpar();
-    }
-
-    function limpar() {
-        setEmail('');
-        setConfirmacaoEmail('');
-        setSenha('');
-        setUser('');
-        setData('');
-        setSexo('Masculino');
-        setError({email: ''});
     }
 
     return (
