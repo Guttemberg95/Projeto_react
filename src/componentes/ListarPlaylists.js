@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import '../css/listarplay.css';
 
+
 function ListarPlaylists() {
     const [playlists, setPlaylists] = useState([]);
 
@@ -41,6 +42,7 @@ function ListarPlaylists() {
             {RetornaLista}
         </div>
     )
+
 }
 
 export default ListarPlaylists;

@@ -15,10 +15,10 @@ function Login() {
 
         axios.get(`http://localhost:3001/usuarios?email=${email}`)
             .then((res) => {
-                if (res.data[0] != undefined) {
+                if (res.data[0] !== undefined) {
                     const usuario = res.data[0];
 
-                    if (usuario.senha !== senha) {
+                    if (!usuario || usuario.senha !== senha) {
                         setError({ dadosInvalidos: 'Dados Inválidos' });
                         return
                     }

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import usuario from "./Usuario";
 import '../css/cadastro.css';
 import axios from "axios";
 
@@ -16,7 +15,7 @@ function Editar() {
 
         axios.get(`http://localhost:3001/usuarios?id=${usuario.id}`)
             .then((res) => {
-                const u = res.data
+                const u = res.data[0];
                 setEmail(u.email);
                 setSenha(u.senha);
                 setUser(u.user);
@@ -31,7 +30,10 @@ function Editar() {
 
             let dados = { email, senha, user, data, sexo }
 
-            axios.put(`http://localhost:3001/usuarios?id=${usuario.id}`, dados)
+            const usuario2 = JSON.parse(localStorage.getItem('usuarioLogado'))
+            console.log(usuario2.id)
+
+            axios.put(`http://localhost:3001/usuarios?id=${usuario2.id}`, dados)
                 .then(res => console.log(res.data))
     
     }

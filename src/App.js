@@ -22,7 +22,6 @@ import {
   Route
 } from "react-router-dom";
 import Login from './componentes/Login.js';
-import usuario from './componentes/Usuario';
 
 
 function App() {

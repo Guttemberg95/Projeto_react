@@ -1,5 +1,4 @@
 import { useState } from "react";
-import usuario from "./Usuario";
 import '../css/cadastro.css';
 import axios from "axios";
 
@@ -15,9 +14,9 @@ function Cadastro() {
     async function handleSubmit(e) {
         e.preventDefault();
 
-        if (email !== confirmacaoEmail) {
+        if (email !== confirmacaoEmail && email.length > 0) {
             
-            let dados = { email, senha, user, data, sexo}
+            let dados = { email, senha, user, data, sexo, playlists:[]}
             
             axios.post("http://localhost:3001/usuarios", dados)
                 .then(res => console.log(res.data))
