@@ -13,6 +13,7 @@ import Footer from './componentes/Footer';
 import Editar from './componentes/Editar';
 import ListarPlaylists from './componentes/ListarPlaylists';
 import DetalhesPlaylist from './componentes/DetalhesPlaylist';
+import Criar_Playlist from './componentes/Criar_Playlist';
 import React from "react";
 
 
@@ -30,6 +31,9 @@ function App() {
       <div>
         <Header/>
         <Switch>
+        <Route path="/Criar_Playlist" >
+            <Criar_Playlist />
+          </Route>
           <Route path="/Playlists/:id" >
             <DetalhesPlaylist />
           </Route>

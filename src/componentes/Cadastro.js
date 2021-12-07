@@ -13,10 +13,13 @@ function Cadastro() {
 
     async function handleSubmit(e) {
         e.preventDefault();
+     
 
-        if (email !== confirmacaoEmail && email.length > 0) {
-            
+        if (email === confirmacaoEmail && email.length > 0) {
+
             let dados = { email, senha, user, data, sexo, playlists:[]}
+
+            console.log(dados)
             
             axios.post("http://localhost:3001/usuarios", dados)
                 .then(res => console.log(res.data))
